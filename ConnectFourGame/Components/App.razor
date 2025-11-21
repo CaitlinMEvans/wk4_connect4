@@ -1,8 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing
 
+<link rel="stylesheet" href="app.css" />
+
 <Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="routeData" />
+        <RouteView RouteData="@routeData" />
     </Found>
     <NotFound>
         <LayoutView>
@@ -10,3 +12,5 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+<script src="_framework/blazor.web.js"></script>
