@@ -1,42 +1,49 @@
-namespace ConnectFourGame.Services;
+using System;
+using System.Collections.Generic;
 
-public class GameStateService
+namespace ConnectFourGame.Services
 {
-    public int Player1Wins { get; private set; } = 0;
-    public int Player2Wins { get; private set; } = 0;
-    public List GameHistory { get; private set; } = new();
-
-    public event Action? OnStateChanged;
-
-    public void RecordWin(int player)
+    public class GameResult
     {
-        if (player == 1)
-            Player1Wins++;
-        else if (player == 2)
-            Player2Wins++;
+        public int Winner { get; set; }   // 1 or 2
+        public DateTime Timestamp { get; set; }
+    }
 
-        GameHistory.Add(new GameRecord
+    public class GameStateService
+    {
+        public int Player1Wins { get; private set; }
+        public int Player2Wins { get; private set; }
+
+        public List<GameResult> GameHistory { get; } = new();
+
+        public event Action? OnStateChanged;
+
+        public void RecordWin(int winner)
         {
-            Winner = player,
-            Timestamp = DateTime.Now
-        });
+            if (winner == 1)
+            {
+                Player1Wins++;
+            }
+            else if (winner == 2)
+            {
+                Player2Wins++;
+            }
 
-        NotifyStateChanged();
+            GameHistory.Add(new GameResult
+            {
+                Winner = winner,
+                Timestamp = DateTime.Now
+            });
+
+            OnStateChanged?.Invoke();
+        }
+
+        public void ResetStats()
+        {
+            Player1Wins = 0;
+            Player2Wins = 0;
+            GameHistory.Clear();
+            OnStateChanged?.Invoke();
+        }
     }
-
-    public void ResetStats()
-    {
-        Player1Wins = 0;
-        Player2Wins = 0;
-        GameHistory.Clear();
-        NotifyStateChanged();
-    }
-
-    private void NotifyStateChanged() => OnStateChanged?.Invoke();
-}
-
-public class GameRecord
-{
-    public int Winner { get; set; }
-    public DateTime Timestamp { get; set; }
 }

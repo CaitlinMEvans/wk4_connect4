@@ -1,15 +1,15 @@
-```csharp
 using ConnectFourGame.Components;
-using ConnectFourGame.Services;
+using ConnectFourGame.Services;  // <-- add this
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
+builder.Services
+    .AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register game state service as singleton to persist across the app
-builder.Services.AddSingleton();
+// register game state tracker
+builder.Services.AddSingleton<GameStateService>();
 
 var app = builder.Build();
 
@@ -24,7 +24,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents()
+app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
