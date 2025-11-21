@@ -1,0 +1,334 @@
+@page "/winstracker"
+@rendermode InteractiveServer
+@inject GameStateService GameState
+@implements IDisposable
+
+Win Tracker
+
+
+    🏆 Win Statistics
+    
+    
+        
+            🔵
+            Player 1
+            @GameState.Player1Wins
+            Wins
+        
+        
+        
+            🟠
+            Player 2
+            @GameState.Player2Wins
+            Wins
+        
+    
+
+    
+        Win Rate
+        
+@if
+ 
+(
+TotalGames 
+>
+ 
+0
+)
+
+        
+{
+
+            
+                
+                    
+                        @Player1Percentage
+%
+
+                    
+                
+                
+                    
+                        @Player2Percentage
+%
+
+                    
+                
+            
+            
+Total
+ Games
+:
+ @TotalGames
+        
+}
+
+        
+else
+
+        
+{
+
+            No games played yet
+.
+ Start playing to see statistics
+!
+
+        
+}
+
+    
+
+    
+@if
+ 
+(
+GameState
+.
+GameHistory
+.
+Any
+(
+)
+)
+
+    
+{
+
+        
+            Recent 
+Games
+
+            
+                @
+foreach
+ 
+(
+var
+ game 
+in
+ GameState
+.
+GameHistory
+.
+OrderByDescending
+(
+g 
+=>
+ g
+.
+Timestamp
+)
+.
+Take
+(
+10
+)
+)
+
+                
+{
+
+                    
+                        
+                            @
+(
+game
+.
+Winner 
+==
+ 
+1
+ 
+?
+ 
+"🔵"
+ 
+:
+ 
+"🟠"
+)
+ Player @game
+.
+Winner 
+won
+
+                        
+                        @game
+.
+Timestamp
+.
+ToString
+(
+"MMM dd, HH:mm"
+)
+
+                    
+                
+}
+
+            
+        
+    
+}
+
+
+    
+        
+            ← Back to Game
+        
+        
+            🔄 Reset Statistics
+        
+    
+
+
+@code
+ 
+{
+
+    
+private
+ 
+int
+ TotalGames 
+=>
+ GameState
+.
+Player1Wins 
++
+ GameState
+.
+Player2Wins
+;
+
+    
+private
+ 
+int
+ Player1Percentage 
+=>
+ TotalGames 
+>
+ 
+0
+ 
+?
+ 
+(
+GameState
+.
+Player1Wins 
+*
+ 
+100
+)
+ 
+/
+ TotalGames 
+:
+ 
+0
+;
+
+    
+private
+ 
+int
+ Player2Percentage 
+=>
+ TotalGames 
+>
+ 
+0
+ 
+?
+ 
+(
+GameState
+.
+Player2Wins 
+*
+ 
+100
+)
+ 
+/
+ TotalGames 
+:
+ 
+0
+;
+
+
+    
+protected
+ 
+override
+ 
+void
+ 
+OnInitialized
+(
+)
+
+    
+{
+
+        GameState
+.
+OnStateChanged 
++=
+ StateHasChanged
+;
+
+    
+}
+
+
+    
+private
+ 
+void
+ 
+ResetStats
+(
+)
+
+    
+{
+
+        GameState
+.
+ResetStats
+(
+)
+;
+
+    
+}
+
+
+    
+public
+ 
+void
+ 
+Dispose
+(
+)
+
+    
+{
+
+        GameState
+.
+OnStateChanged 
+-=
+ StateHasChanged
+;
+
+    
+}
+
+}

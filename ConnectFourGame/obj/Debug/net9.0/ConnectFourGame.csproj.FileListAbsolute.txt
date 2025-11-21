@@ -1,0 +1,6 @@
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.AssemblyInfoInputs.cache
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.AssemblyInfo.cs
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.csproj.CoreCompileInputs.cache
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.MvcApplicationPartsAssemblyInfo.cache
