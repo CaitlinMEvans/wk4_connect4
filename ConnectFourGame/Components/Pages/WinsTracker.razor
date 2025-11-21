@@ -1,5 +1,4 @@
 @page "/winstracker"
-@rendermode InteractiveServer
 @using ConnectFourGame.Services
 @using System.Linq
 @inject GameStateService GameState
@@ -87,8 +86,8 @@
             ← Back to Game
         </a>
 
-        <button class="action-button reset-button" @onclick="ResetStats">
-             Reset Statistics
+        <button class="action-button tracker-reset-button" @onclick="ResetStats">
+            Reset Statistics
         </button>
     </div>
 </div>
