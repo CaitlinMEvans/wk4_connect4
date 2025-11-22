@@ -1,5 +1,42 @@
 ﻿@page "/"
+@using System.Drawing
+@rendermode InteractiveServer
 
-<PageTitle>Connect Four</PageTitle>
+<PageTitle>Home</PageTitle>
 
-<Board />
+<Board 
+    BoardColor="@CurrentBoardColor"
+    Player1Color="@CurrentPlayer1Color"
+    Player2Color="@CurrentPlayer2Color" />
+
+<ColorSelection 
+    OnBoardColorSelected="UpdateBoardColor" 
+    OnPlayerOneColorSelected="UpdatePlayerOneColor" 
+    OnPlayerTwoColorSelected="UpdatePlayerTwoColor" />
+
+@code {
+    private Color CurrentBoardColor = ColorTranslator.FromHtml("#020617");   // your dark board
+    private Color CurrentPlayer1Color = ColorTranslator.FromHtml("#3b82f6"); // your blue
+    private Color CurrentPlayer2Color = ColorTranslator.FromHtml("#f97316"); // your orange
+
+    private Task UpdateBoardColor(Color newColor)
+    {
+        CurrentBoardColor = newColor;
+        StateHasChanged();
+        return Task.CompletedTask;
+    }
+
+    private Task UpdatePlayerOneColor(Color newColor)
+    {
+        CurrentPlayer1Color = newColor;
+        StateHasChanged();
+        return Task.CompletedTask;
+    }
+
+    private Task UpdatePlayerTwoColor(Color newColor)
+    {
+        CurrentPlayer2Color = newColor;
+        StateHasChanged();
+        return Task.CompletedTask;
+    }
+}

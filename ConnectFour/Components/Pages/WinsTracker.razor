@@ -1,8 +1,10 @@
 @page "/winstracker"
-@using ConnectFourGame.Services
+@using ConnectFour.Services
 @using System.Linq
 @inject GameStateService GameState
 @implements IDisposable
+
+@layout Layout.MainLayout
 
 <div class="tracker-container">
     <h1>Win Tracker</h1>
