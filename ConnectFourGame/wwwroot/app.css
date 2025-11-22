@@ -497,3 +497,24 @@ a:focus-visible {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
 }
+
+/* app.css */
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
+}

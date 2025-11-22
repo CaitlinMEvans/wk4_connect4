@@ -21,7 +21,6 @@ C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\Connec
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\scopedcss\bundle\ConnectFourGame.styles.css
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\scopedcss\projectbundle\ConnectFourGame.bundle.scp.css
-C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\cyt0r8n4o3-2a43wyd9v8.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\efu9yx7p0x-bqjiyaj88i.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\f7eeh5lq2l-c2jlpeoesf.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\eneplab91q-erw9l3u2r3.gz
@@ -66,8 +65,8 @@ C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\Connec
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\u4pbim54x5-h1s4sie4z3.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\0lfn7du8if-63fj8s7r0e.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\97lxjimmcr-0j3bgjxly4.gz
-C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\41n51fz8c7-3nldybb66z.gz
-C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\tdwy1vfwqe-3nldybb66z.gz
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\41n51fz8c7-jp82gx7jjo.gz
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\tdwy1vfwqe-jp82gx7jjo.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\staticwebassets.development.json
@@ -77,3 +76,4 @@ C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\Connec
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.pdb
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ConnectFourGame.genruntimeconfig.cache
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\ref\ConnectFourGame.dll
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFourGame\obj\Debug\net9.0\compressed\cyt0r8n4o3-l2unqa1pz9.gz

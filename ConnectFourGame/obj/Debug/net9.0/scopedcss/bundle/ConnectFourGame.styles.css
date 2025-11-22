@@ -205,10 +205,10 @@ main[b-5vd4mpq1h6] {
     box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
 }
 
-.column-button:disabled[b-5vd4mpq1h6] {
+/* .column-button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
-}
+} */
 
 /* Cells */
 .cell[b-5vd4mpq1h6] {

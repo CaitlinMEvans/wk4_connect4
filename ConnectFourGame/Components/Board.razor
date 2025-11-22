@@ -128,7 +128,7 @@
         int player = Grid[col, row];
         var cells = new List<(int, int)> { (col, row) };
 
-        // forward direction
+        // forward
         int c = col + dCol, r = row + dRow;
         while (c >= 0 && c < 7 && r >= 0 && r < 6 && Grid[c, r] == player)
         {
@@ -136,7 +136,7 @@
             c += dCol; r += dRow;
         }
 
-        // backward direction
+        // backward
         c = col - dCol; r = row - dRow;
         while (c >= 0 && c < 7 && r >= 0 && r < 6 && Grid[c, r] == player)
         {
