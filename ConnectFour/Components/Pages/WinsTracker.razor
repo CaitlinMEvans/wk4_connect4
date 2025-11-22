@@ -1,30 +1,32 @@
 @page "/winstracker"
-@using ConnectFour.Services
 @using System.Linq
-@inject GameStateService GameState
+@using ConnectFour.Components
+@inject GameState State
 @implements IDisposable
-
 @layout Layout.MainLayout
+@rendermode InteractiveServer
 
 <div class="tracker-container">
     <h1>Win Tracker</h1>
 
+    <!-- Top stats: wins per player -->
     <div class="stats-grid">
         <div class="stat-card player1-card">
             <div class="stat-icon">🔵</div>
             <h2>Player 1</h2>
-            <div class="stat-number">@GameState.Player1Wins</div>
+            <div class="stat-number">@State.Player1Wins</div>
             <div class="stat-label">Wins</div>
         </div>
 
         <div class="stat-card player2-card">
             <div class="stat-icon">🟠</div>
             <h2>Player 2</h2>
-            <div class="stat-number">@GameState.Player2Wins</div>
+            <div class="stat-number">@State.Player2Wins</div>
             <div class="stat-label">Wins</div>
         </div>
     </div>
 
+    <!-- Win rate -->
     <div class="win-rate-section">
         <h3>Win Rate</h3>
 
@@ -56,13 +58,14 @@
         }
     </div>
 
-    @if (GameState.GameHistory.Any())
+    <!-- Recent game history -->
+    @if (State.GameHistory.Any())
     {
         <div class="history-section">
             <h3>Recent Games</h3>
 
             <div class="history-list">
-                @foreach (var game in GameState.GameHistory
+                @foreach (var game in State.GameHistory
                     .OrderByDescending(g => g.Timestamp)
                     .Take(10))
                 {
@@ -79,6 +82,7 @@
         </div>
     }
 
+    <!-- Actions -->
     <div class="tracker-actions">
         <a href="/" class="action-button primary-button">
             ← Back to Game
@@ -91,26 +95,26 @@
 </div>
 
 @code {
-    private int TotalGames => GameState.Player1Wins + GameState.Player2Wins;
+    private int TotalGames => State.Player1Wins + State.Player2Wins;
 
     private int Player1Percentage =>
-        TotalGames > 0 ? (GameState.Player1Wins * 100) / TotalGames : 0;
+        TotalGames > 0 ? (State.Player1Wins * 100) / TotalGames : 0;
 
     private int Player2Percentage =>
-        TotalGames > 0 ? (GameState.Player2Wins * 100) / TotalGames : 0;
+        TotalGames > 0 ? (State.Player2Wins * 100) / TotalGames : 0;
 
     protected override void OnInitialized()
     {
-        GameState.OnStateChanged += StateHasChanged;
+        State.OnStateChanged += StateHasChanged;
     }
 
     private void ResetStats()
     {
-        GameState.ResetStats();
+        State.ResetStats();
     }
 
     public void Dispose()
     {
-        GameState.OnStateChanged -= StateHasChanged;
+        State.OnStateChanged -= StateHasChanged;
     }
 }

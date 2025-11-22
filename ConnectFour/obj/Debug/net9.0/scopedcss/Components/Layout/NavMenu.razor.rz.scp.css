@@ -1,0 +1,91 @@
+.top-row[b-4risrr6esb] {
+    height: 3.5rem;
+    background-color: #020617; /* dark navy */
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand[b-4risrr6esb] {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+/* Mobile toggle (the checkbox) */
+.navbar-toggler[b-4risrr6esb] {
+    position: absolute;
+    top: 0.65rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* Sidebar / nav panel */
+.nav-scrollable[b-4risrr6esb] {
+    position: sticky;
+    top: 3.5rem;
+    height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+    background-color: #020617;
+    border-right: 1px solid rgba(148, 163, 184, 0.12);
+    padding-top: 0.75rem;
+}
+
+/* nav items */
+.nav[b-4risrr6esb] {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav-item[b-4risrr6esb] {
+    margin-bottom: 0.25rem;
+}
+
+.nav-link[b-4risrr6esb] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    color: #9ca3af;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover[b-4risrr6esb] {
+    background-color: rgba(148, 163, 184, 0.12);
+    color: #e5e7eb;
+}
+
+.nav-link.active[b-4risrr6esb] {
+    background-color: #38bdf8;
+    color: #020617;
+}
+
+/* Icon tweaks – if you use bootstrap icons with custom suffix classes */
+.bi-house-door-fill-nav-menu[b-4risrr6esb],
+.bi-bar-chart-fill-nav-menu[b-4risrr6esb] {
+    font-size: 1.1rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .nav-scrollable[b-4risrr6esb] {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        width: 14rem;
+        height: calc(100vh - 3.5rem);
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-out;
+        z-index: 2;
+    }
+
+    .navbar-toggler:checked ~ .nav-scrollable[b-4risrr6esb] {
+        transform: translateX(0);
+    }
+}

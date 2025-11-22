@@ -1,0 +1,166 @@
+.tracker-container[b-6mvja2ao64] {
+    max-width: 48rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: radial-gradient(circle at top, #020617, #0f172a);
+    color: #e5e7eb;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Title */
+.tracker-container h1[b-6mvja2ao64] {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* --- Stats Grid --- */
+.stats-grid[b-6mvja2ao64] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card[b-6mvja2ao64] {
+    background: #111827;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    text-align: center;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.player1-card[b-6mvja2ao64] {
+    border-color: #38bdf8; /* light blue */
+}
+
+.player2-card[b-6mvja2ao64] {
+    border-color: #fb923c; /* orange */
+}
+
+.stat-icon[b-6mvja2ao64] {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number[b-6mvja2ao64] {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.stat-label[b-6mvja2ao64] {
+    font-size: 0.875rem;
+    opacity: 0.75;
+}
+
+/* --- Win Rate Section --- */
+.win-rate-section[b-6mvja2ao64] {
+    margin-bottom: 2rem;
+}
+
+.win-rate-bars[b-6mvja2ao64] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.win-rate-bar[b-6mvja2ao64] {
+    background: #1e293b;
+    border-radius: 9999px;
+    height: 1.75rem;
+    overflow: hidden;
+}
+
+.bar-fill[b-6mvja2ao64] {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #020617;
+}
+
+.player1-bar[b-6mvja2ao64] {
+    background: linear-gradient(to right, #60a5fa, #38bdf8);
+}
+
+.player2-bar[b-6mvja2ao64] {
+    background: linear-gradient(to right, #fb923c, #f97316);
+}
+
+.total-games[b-6mvja2ao64] {
+    margin-top: 0.5rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.no-games[b-6mvja2ao64] {
+    text-align: center;
+    margin-top: 0.75rem;
+    opacity: 0.8;
+}
+
+/* --- History --- */
+.history-section[b-6mvja2ao64] {
+    margin-bottom: 2.25rem;
+}
+
+.history-list[b-6mvja2ao64] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.history-item[b-6mvja2ao64] {
+    display: flex;
+    justify-content: space-between;
+    background: #0f172a;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.history-winner[b-6mvja2ao64] {
+    font-weight: 600;
+}
+
+.history-time[b-6mvja2ao64] {
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+/* --- Actions --- */
+.tracker-actions[b-6mvja2ao64] {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.action-button[b-6mvja2ao64] {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.primary-button[b-6mvja2ao64] {
+    background: #38bdf8;
+    color: #020617;
+}
+
+.tracker-reset-button[b-6mvja2ao64] {
+    background: #ef4444;
+    color: #020617;
+}
