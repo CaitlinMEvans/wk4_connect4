@@ -1,0 +1,114 @@
+@page "/winstracker"
+@using ConnectFourGame.Services
+@using System.Linq
+@inject GameStateService GameState
+@implements IDisposable
+
+<div class="tracker-container">
+    <h1>Win Tracker</h1>
+
+    <div class="stats-grid">
+        <div class="stat-card player1-card">
+            <div class="stat-icon">🔵</div>
+            <h2>Player 1</h2>
+            <div class="stat-number">@GameState.Player1Wins</div>
+            <div class="stat-label">Wins</div>
+        </div>
+
+        <div class="stat-card player2-card">
+            <div class="stat-icon">🟠</div>
+            <h2>Player 2</h2>
+            <div class="stat-number">@GameState.Player2Wins</div>
+            <div class="stat-label">Wins</div>
+        </div>
+    </div>
+
+    <div class="win-rate-section">
+        <h3>Win Rate</h3>
+
+        @if (TotalGames > 0)
+        {
+            <div class="win-rate-bars">
+                <div class="win-rate-bar" aria-label="Player 1 win rate">
+                    <div class="bar-fill player1-bar" style="width:@Player1Percentage%">
+                        <span class="bar-label">Player 1 – @Player1Percentage%</span>
+                    </div>
+                </div>
+
+                <div class="win-rate-bar" aria-label="Player 2 win rate">
+                    <div class="bar-fill player2-bar" style="width:@Player2Percentage%">
+                        <span class="bar-label">Player 2 – @Player2Percentage%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-games">
+                Total Games: @TotalGames
+            </div>
+        }
+        else
+        {
+            <div class="no-games">
+                No games played yet. Start playing to see statistics!
+            </div>
+        }
+    </div>
+
+    @if (GameState.GameHistory.Any())
+    {
+        <div class="history-section">
+            <h3>Recent Games</h3>
+
+            <div class="history-list">
+                @foreach (var game in GameState.GameHistory
+                    .OrderByDescending(g => g.Timestamp)
+                    .Take(10))
+                {
+                    <div class="history-item">
+                        <span class="history-winner">
+                            @(game.Winner == 1 ? "🔵 Player 1" : "🟠 Player 2") won
+                        </span>
+                        <span class="history-time">
+                            @game.Timestamp.ToString("MMM dd, HH:mm")
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+    <div class="tracker-actions">
+        <a href="/" class="action-button primary-button">
+            ← Back to Game
+        </a>
+
+        <button class="action-button tracker-reset-button" @onclick="ResetStats">
+            Reset Statistics
+        </button>
+    </div>
+</div>
+
+@code {
+    private int TotalGames => GameState.Player1Wins + GameState.Player2Wins;
+
+    private int Player1Percentage =>
+        TotalGames > 0 ? (GameState.Player1Wins * 100) / TotalGames : 0;
+
+    private int Player2Percentage =>
+        TotalGames > 0 ? (GameState.Player2Wins * 100) / TotalGames : 0;
+
+    protected override void OnInitialized()
+    {
+        GameState.OnStateChanged += StateHasChanged;
+    }
+
+    private void ResetStats()
+    {
+        GameState.ResetStats();
+    }
+
+    public void Dispose()
+    {
+        GameState.OnStateChanged -= StateHasChanged;
+    }
+}

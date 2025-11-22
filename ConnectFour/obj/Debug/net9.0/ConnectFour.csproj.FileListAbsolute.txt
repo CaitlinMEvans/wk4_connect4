@@ -1,0 +1,7 @@
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.AssemblyInfoInputs.cache
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.AssemblyInfo.cs
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.csproj.CoreCompileInputs.cache
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.sourcelink.json

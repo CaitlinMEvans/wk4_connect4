@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddRazorComponents()
     .AddInteractiveServerComponents();
+    builder.Services.AddSingleton<ConnectFourGame.Services.GameStateService>();
+
 
 // register game state tracker
 builder.Services.AddSingleton<GameStateService>();

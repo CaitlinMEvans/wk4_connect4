@@ -8,11 +8,10 @@ namespace ConnectFourGame.Services
         public const int Columns = 7;
         public const int Rows = 6;
 
-        // Board[row, col] = 0 (empty), 1 (player 1), 2 (player 2)
         private readonly byte[,] _board = new byte[Rows, Columns];
 
         public byte PlayerTurn { get; private set; } = 1;  // 1 or 2
-        public int CurrentTurn { get; private set; } = 0;  // 0..42
+        public int CurrentTurn { get; private set; } = 0;   // 0..42
 
         public enum WinState
         {
@@ -24,7 +23,7 @@ namespace ConnectFourGame.Services
 
         public WinState LastWinState { get; private set; } = WinState.None;
 
-        // --- Win tracking across games ---
+        // --- Win tracking ---
         public int Player1Wins { get; private set; }
         public int Player2Wins { get; private set; }
 
@@ -57,7 +56,7 @@ namespace ConnectFourGame.Services
         }
 
         /// <summary>
-        /// Plays a piece in the given column (0-based). Returns the landing row (1–6) for CSS drop classes.
+        /// Plays a piece in the given column (0-based). Returns landing row (1–6) for CSS.
         /// </summary>
         public byte PlayPiece(byte col)
         {
@@ -92,6 +91,7 @@ namespace ConnectFourGame.Services
 
             if (win == WinState.Player1_Wins || win == WinState.Player2_Wins)
             {
+                // only record once
                 if (LastWinState != win)
                 {
                     if (win == WinState.Player1_Wins) Player1Wins++;
@@ -111,11 +111,11 @@ namespace ConnectFourGame.Services
             return win;
         }
 
-        /// <summary>
-        /// Explicit 4-in-a-row check in each direction. No fancy arrays, no indexing tricks.
-        /// </summary>
         private WinState CalculateWinInternal()
         {
+            // directions: right, up, diag-up-right, diag-up-left
+            int[,] directions = { { 1, 0 }, { 0, 1 }, { 1, 1 }, { 1, -1 } };
+
             for (int row = 0; row < Rows; row++)
             {
                 for (int col = 0; col < Columns; col++)
@@ -123,50 +123,39 @@ namespace ConnectFourGame.Services
                     var player = _board[row, col];
                     if (player == 0) continue;
 
-                    // Horizontal (to the right)
-                    if (col + 3 < Columns &&
-                        _board[row, col + 1] == player &&
-                        _board[row, col + 2] == player &&
-                        _board[row, col + 3] == player)
+                    foreach (var dir in directions)
                     {
-                        return player == 1 ? WinState.Player1_Wins : WinState.Player2_Wins;
-                    }
-
-                    // Vertical (upwards)
-                    if (row + 3 < Rows &&
-                        _board[row + 1, col] == player &&
-                        _board[row + 2, col] == player &&
-                        _board[row + 3, col] == player)
-                    {
-                        return player == 1 ? WinState.Player1_Wins : WinState.Player2_Wins;
-                    }
-
-                    // Diagonal down-right
-                    if (row + 3 < Rows && col + 3 < Columns &&
-                        _board[row + 1, col + 1] == player &&
-                        _board[row + 2, col + 2] == player &&
-                        _board[row + 3, col + 3] == player)
-                    {
-                        return player == 1 ? WinState.Player1_Wins : WinState.Player2_Wins;
-                    }
-
-                    // Diagonal down-left
-                    if (row + 3 < Rows && col - 3 >= 0 &&
-                        _board[row + 1, col - 1] == player &&
-                        _board[row + 2, col - 2] == player &&
-                        _board[row + 3, col - 3] == player)
-                    {
-                        return player == 1 ? WinState.Player1_Wins : WinState.Player2_Wins;
+                        if (HasFourFrom(row, col, dir[0], dir[1], player))
+                        {
+                            return player == 1
+                                ? WinState.Player1_Wins
+                                : WinState.Player2_Wins;
+                        }
                     }
                 }
             }
 
-            // No winner but board full => tie
             if (CurrentTurn >= Rows * Columns)
                 return WinState.Tie;
 
             return WinState.None;
         }
+
+        private bool HasFourFrom(int row, int col, int dRow, int dCol, byte player)
+        {
+            for (int i = 1; i < 4; i++)
+            {
+                int r = row + dRow * i;
+                int c = col + dCol * i;
+
+                if (r < 0 || r >= Rows || c < 0 || c >= Columns)
+                    return false;
+
+                if (_board[r, c] != player)
+                    return false;
+            }
+
+            return true;
+        }
     }
 }
-
