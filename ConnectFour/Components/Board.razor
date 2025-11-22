@@ -15,7 +15,7 @@
         var col = i;
         <button type="button"
                 class="column-button"
-                title="Click to play a piece"
+                title="@($"Drop in column {col + 1}")"
                 @onclick="() => PlayPiece(col)">
             ⬇
         </button>
