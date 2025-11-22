@@ -68,8 +68,6 @@ C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\Connec
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\gr0e8cuikz-h1s4sie4z3.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\ryt7pnzvl8-63fj8s7r0e.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\3mozzcgcz6-0j3bgjxly4.gz
-C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\8rgyt56fu5-9xcguuj5ra.gz
-C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\i191p69b07-9xcguuj5ra.gz
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\staticwebassets.development.json
@@ -79,3 +77,5 @@ C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\Connec
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.pdb
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ConnectFour.genruntimeconfig.cache
 C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\ref\ConnectFour.dll
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\8rgyt56fu5-9xcguuj5ra.gz
+C:\Users\c8tsg\Desktop\BYUi\BYUi_2025\Block 06\CSE325 - .Net\wk4_connect4\ConnectFour\obj\Debug\net9.0\compressed\i191p69b07-9xcguuj5ra.gz
